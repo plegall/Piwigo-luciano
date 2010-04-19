@@ -62,7 +62,6 @@ html, body 	{
 }
 
 p 							{ margin: 10px;}
-.clear				{ clear: both }
 a, a:visited 	{ color: #ddd; text-decoration: none; }
 a:hover				{ color: #fff }
 
@@ -84,9 +83,6 @@ a:hover				{ color: #fff }
 	#imagerotator 						{position: relative; margin-top: 0px; height: 100px }
 	#imagerotator img 				{position: absolute; top: 0; left: 0 }
 
-	.content								{ margin-top: 20px; position: relative; }
-  .home .content						{ height: 360px }
-
 		#copyright						{ clear: both; margin: 20px 0 5px 0; padding-top: 5px; border-top: 2px solid #222; text-align: left; text-align: right; line-height: 1.2em }
 		#copyright span				{ color: #444; }
 		#copyright a,
@@ -100,13 +96,14 @@ a:hover				{ color: #fff }
 #rss		{ position: absolute; top: 10px; right: 0;  }
 #rss a		{ display: block; width: 28px; height: 28px; text-indent: -2000px; border: 0;	background: transparent url('icon/rss.png'); }
 
-.content 				{ float: right; width: 1024px; background: transparent url(skin/1024dark.png); }
-.content .footer { clear:both; width: 1024px; height: 10px;	background: transparent url(skin/1024darkFooter.png) bottom left; }
+.content 						{ float: right; width: 1024px; margin: 20px 0; padding-bottom: 10px; position: relative; background: transparent url(skin/1024darkBottom.png) bottom left; }
+.content .titrePage	{ background: transparent url(skin/1024darkTop.png) no-repeat; }
+.content dl					{ margin: 25px; }
 
-BODY#theCategoryPage .content					{ width: 750px; background: transparent url(skin/750dark.png); }
-BODY#theCategoryPage .content .footer 	{ width: 750px; background: transparent url(skin/750darkFooter.png) bottom left; }
+BODY#theCategoryPage .content							{ width: 750px; background: transparent url(skin/750darkBottom.png) bottom left; }
+BODY#theCategoryPage .content	.titrePage	{ background: transparent url(skin/750darkTop.png) no-repeat; }
 
-#menubar		{ float: left; width: 264px; margin-top: 10px; text-align: left; color: #888; }
+#menubar		{ float: left; width: 264px; margin: 10px 0 20px 0; text-align: left; color: #888; }
 #menubar dl 	{ width: 264px; background: transparent url(skin/264grey3.png); margin-top: 10px; }
 #menubar dt	{ margin-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 1.2em; font-weight: 700 }
 
@@ -125,7 +122,7 @@ BODY#theCategoryPage .content .footer 	{ width: 750px; background: transparent u
 
 #menubar dd ul ul { padding-left: 15px; }
 
-#menubar .totalImages 	{ margin:0 40px; padding-bottom:10px; }
+#menubar .totalImages 	{ margin:0 10px; padding-bottom:10px; }
 #menubar .actions			{ padding:0; }
 #menubar .button 			{ float:right; margin-right:5px; }
 
@@ -137,7 +134,7 @@ BODY#theCategoryPage .content .footer 	{ width: 750px; background: transparent u
 
 /* ELEMENTS */
 
-.titrePage						{ margin: 10px 0 5px 10px; height: 30px; }
+.titrePage						{ padding: 10px 0 5px 10px; height: 30px; }
 .titrePage h1					{ float: left; }
 .additional_info			{ clear: both; padding-top: 10px; text-indent: 50px; color: #333;}
 .thumbnailCategories	{ margin-left: 10px; clear:both; }
@@ -263,7 +260,7 @@ BODY#theCategoryPage .content .footer 	{ width: 750px; background: transparent u
 /* MOOTOOLS PLUGIN */
 
 .elSelect 								{ width: 160px; height: 20px; background: transparent url(elSelect/select_bg.png) no-repeat 0 0; }
-.elSelect .clear 						{ clear: both; }
+.elSelect .clear 				{ clear: both; }
 
 .elSelect .selected 				{ color: #333 !important; background-color: #999 !important; }
 .elSelect .selectedOption 	{ color: #222; float: left; padding: 4px 0 0 6px; width: 87px; font-weight: bold; font-size: 12px; overflow: hidden; }

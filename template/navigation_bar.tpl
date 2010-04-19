@@ -18,7 +18,7 @@
 
   {assign var='prev_page' value=0}
   {foreach from=$navbar.pages key=page item=url}
-    {if $page > $prev_page+1}...{/if}
+    {if $page > $prev_page+1}<span>...</span>{/if}
     {if $page == $navbar.CURRENT_PAGE}
       <span class="pageNumberSelected">{$page}</span>
     {else}

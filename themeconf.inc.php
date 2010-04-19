@@ -14,19 +14,8 @@ $themeconf = array(
 );
 
 $this->set_template_dir(PHPWG_THEMES_PATH.'default/template');
-$this->smarty->register_prefilter( 'add_footer_and_clear_div' );
 
 $conf['show_thumbnail_caption'] = false;
-
-function add_footer_and_clear_div($content, &$smarty)
-{
-  return
-    str_replace(
-      '</div> <!-- content -->',
-      "<div class=\"footer\"></div>\n</div> <!-- content -->\n<div class=\"clear\"></div>",
-      $content
-    );
-}
 
 // Remove comments link in Menu
 add_event_handler('blockmanager_apply' , 'remove_comments_link');

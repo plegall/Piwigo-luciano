@@ -1,0 +1,7 @@
+/* fix IE with another layout for thumbnails */
+
+
+
+.content UL.thumbnails IMG.thumbnail {
+  position: relative; 
+}

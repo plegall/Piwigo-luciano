@@ -1,4 +1,4 @@
-/* fix IE with another layout for thumbnails */
+/* Fix for IE < 8 */
 
 .content UL.thumbnails SPAN.wrap2 {
   display: block;
@@ -8,7 +8,6 @@
 .content UL.thumbnails SPAN.wrap2 A,
 .content UL.thumbnails SPAN.wrap2 SPAN {
   width:170px;
-  overflow: visible;
   position: absolute;
   top: 50%;
   text-align: center;
@@ -16,5 +15,5 @@
 
 .content UL.thumbnails IMG.thumbnail {
   position: relative;
-  top: -50%;   
+  top: -50%;
 }

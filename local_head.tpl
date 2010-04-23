@@ -1,8 +1,8 @@
-<!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="{$ROOT_URL}themes/luciano/fix-ie5-ie6.css">
-<![endif]-->
-<!--[if gt IE 6]>
+<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="{$ROOT_URL}themes/luciano/fix-ie7.css">
+<![endif]-->
+<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="{$ROOT_URL}themes/luciano/fix-ie6.css">
 <![endif]-->
 
 {if $BODY_ID == 'thePicturePage'}

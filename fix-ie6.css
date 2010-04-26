@@ -9,4 +9,4 @@
 
 .thumbnails li	{ overflow: hidden;}
 
-#linkThumbs						{ position: absolute; top: 0; left: 400px; width: 224px; height: 600px; background-image: url(transparent.gif); }
+#linkThumbs	{ position: absolute; top: 0; left: 400px; width: 224px; height: 600px; background-image: url(transparent.gif); }

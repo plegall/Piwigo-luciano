@@ -16,6 +16,7 @@ $themeconf = array(
 $this->set_template_dir(PHPWG_THEMES_PATH.'default/template');
 
 $conf['show_thumbnail_caption'] = false;
+$conf['top_number'] = 12;
 
 // Remove comments link in Menu
 add_event_handler('blockmanager_apply' , 'remove_comments_link');

@@ -31,7 +31,7 @@
     <a href="{$navbar.URL_NEXT}" rel="next">&gt;</a>
     <a href="{$navbar.URL_LAST}" rel="last">&gt;&gt;</a>
   {else}
-    <span>&gt;&gt;</span>
     <span>&gt;</span>
+    <span>&gt;&gt;</span>
   {/if}
 </div>

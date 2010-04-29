@@ -9,11 +9,11 @@ Author URI: http://www.lucianoamodio.it/portfolio/
 */
 
 $themeconf = array(
-  'icon_dir'    => 'themes/luciano/icon',
-  'local_head'  => 'local_head.tpl',
+  'parent'          => 'default',
+  'icon_dir'        => 'themes/luciano/icon',
+  'local_head'      => 'local_head.tpl',
+  'load_parent_css' => false,
 );
-
-$this->set_template_dir(PHPWG_THEMES_PATH.'default/template');
 
 $conf['show_thumbnail_caption'] = false;
 $conf['top_number'] = 12;

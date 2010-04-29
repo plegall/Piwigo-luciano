@@ -9,10 +9,11 @@ Author URI: http://www.lucianoamodio.it/portfolio/
 */
 
 $themeconf = array(
-  'parent'          => 'default',
-  'icon_dir'        => 'themes/luciano/icon',
-  'local_head'      => 'local_head.tpl',
-  'load_parent_css' => false,
+  'parent'                 => 'default',
+  'icon_dir'               => 'themes/luciano/icon',
+  'local_head'             => 'local_head.tpl',
+  'load_parent_css'        => false,
+  'load_parent_local_head' => false,
 );
 
 $conf['show_thumbnail_caption'] = false;

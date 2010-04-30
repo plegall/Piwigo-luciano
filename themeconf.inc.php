@@ -16,16 +16,20 @@ $themeconf = array(
   'load_parent_local_head' => false,
 );
 
-$conf['show_thumbnail_caption'] = false;
+$conf['show_thumbnail_caption']  = false;
+$conf['index_posted_date_icon']  = false;
+$conf['index_created_date_icon'] = false;
 $conf['top_number'] = 12;
 
-// Remove comments link in Menu
-add_event_handler('blockmanager_apply' , 'remove_comments_link');
-function remove_comments_link($menu_ref_arr)
+// Remove comments and calendar links in menubar
+add_event_handler('blockmanager_apply' , 'remove_comments_and_calendar_links');
+function remove_comments_and_calendar_links($menu_ref_arr)
 {
   $menu = & $menu_ref_arr[0];
   if (($block = $menu->get_block('mbMenu')) != null )
     unset($block->data['comments']);
+  if (($block = $menu->get_block('mbSpecials')) != null )
+    unset($block->data['calendar']);
 }
 
 global $user;

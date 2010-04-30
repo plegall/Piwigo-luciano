@@ -28,6 +28,10 @@
   {if isset($U_SLIDESHOW_STOP) }<p>[ <a href="{$U_SLIDESHOW_STOP}">{'slideshow_stop'|@translate}</a>]</p>{/if}
 </div>
 
+{if isset($COMMENT_IMG)}
+<p>{$COMMENT_IMG}</p>
+{/if}
+
 <div id="imageInfo">
   <div id="imageInfoLeft">
     <div id="viewRatign"><span class="viewTxt">{'Visits'|@translate} </span><span class="viewValue">{$INFO_VISITS}</span></div>

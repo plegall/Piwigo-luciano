@@ -29,21 +29,20 @@ label				{ color:#999; }
 textarea		{ border: 1px solid #666; }
 textarea:focus,
 input:focus	{ border: 1px solid #666; }
-select			{ background-color: #fff; color: #000; }
+select			{ background-color: #222; color: #666; }
 input				{ border: 1px solid #444; background-color: #222; color: #666; }
 input[type="submit"]				{ background-color: #666; color: #222; }
 input[type="submit"]:hover	{ background-color: #222; color: #666; cursor: hand; }
 input[type="checkbox"]			{ color: #000; border: 0 none; vertical-align: middle; }
 input[type="radio"]					{ background-color: transparent; border:0 none; color: #000; }
-option											{ background-color:#222; color:#000; }
-optgroup										{ background-color:#ccc; color:#000; }
+option, optgroup						{ background-color:#222; color:#666; }
 
-form.properties fieldset { border: 1px solid; margin: 15px; padding: 1em;}
-form.properties legend { display: block; padding:5px;}
-form.properties li { clear:left; line-height:1.8em; margin-bottom:0.5em; padding:0; }
-form.properties span.property { float:left; font-weight:bold; margin:0; padding:0 0.5em 0 0; text-align:right; width:50%; }
-form.properties span.property label { float:left; width:98%; display:block; clear:left; text-align:right; margin-top:0; }
-form #themeSelect, form #languageSelect  { float: left; line-height:0.8em; padding:0.3em 0 0.7em 0; cursor:pointer;}
+FORM.properties fieldset { border: 1px solid; margin: 15px; padding: 1em;}
+FORM.properties legend { display: block; padding:5px;}
+FORM.properties li { clear:left; line-height:1.8em; margin-bottom:0.5em; padding:0; }
+FORM.properties span.property { float:left; font-weight:bold; margin:0; padding:0 0.5em 0 0; text-align:right; width:50%; }
+FORM.properties span.property label { float:left; width:98%; display:block; clear:left; text-align:right; margin-top:0; }
+FORM #themeSelect, form #languageSelect  { float: left; line-height:0.8em; padding:0.3em 0 0.7em 0; cursor:pointer;}
 
 /***** STYLE ****/
 html, body 	{
@@ -61,35 +60,36 @@ html, body 	{
 	sans-serif;
 }
 
-p 							{ margin: 10px;}
+p 						{ margin: 10px;}
 a, a:visited 	{ color: #ddd; text-decoration: none; }
 a:hover				{ color: #fff }
+h2 a					{ margin-left: 3px; }
 
 #the_page									{ position: relative; width: 1024px; margin: 0 auto; text-align: center }
-	#theHeader,.content			{ text-align: left }
+#theHeader,.content			{ text-align: left }
 
-	#theHeader							{ padding-top: 20px; }
-	#theHeader h1						{ color: #fff; font-size: 1.4em }
-  #theHeader h1,
-	#theHeader h1 a,
-	#theHeader h1 a:visited,
-	#theHeader h1 a:hover			{color: #fff; border: none }
+#theHeader							{ padding-top: 20px; }
+#theHeader h1						{ color: #fff; font-size: 1.4em }
+#theHeader h1,
+#theHeader h1 a,
+#theHeader h1 a:visited,
+#theHeader h1 a:hover			{color: #fff; border: none }
 
-  #theHeader p							{ margin-left: 20px; margin-top: -4px; margin: -4px 0 10px 20px; color: #666; border: none }
+#theHeader p							{ margin-left: 20px; margin-top: -4px; margin: -4px 0 10px 20px; color: #666; border: none }
 
-	#headerMenu							{ position: absolute; top: 40px; right: 0  }
-	#headerMenu li						{ float: left; margin-left: 40px }
+#headerMenu							{ position: absolute; top: 40px; right: 0  }
+#headerMenu li						{ float: left; margin-left: 40px }
 
-	#imagerotator 						{position: relative; margin-top: 0px; height: 100px }
-	#imagerotator img 				{position: absolute; top: 0; left: 0 }
+#imagerotator 						{position: relative; margin-top: 0px; height: 100px }
+#imagerotator img 				{position: absolute; top: 0; left: 0 }
 
-		#copyright						{ clear: both; margin: 20px 0 5px 0; padding-top: 5px; border-top: 2px solid #222; text-align: left; text-align: right; line-height: 1.2em }
-		#copyright span				{ color: #444; }
-		#copyright a,
-		#copyright a:visited,
-		#copyright a:hover			{ color: #444; }
-		#copyright a:hover			{ color: #666; }
-		#copyright .cName			{ color: #555; font-weight: bold }
+#copyright						{ clear: both; margin: 20px 0 5px 0; padding-top: 5px; border-top: 2px solid #222; text-align: left; text-align: right; line-height: 1.2em }
+#copyright span				{ color: #444; }
+#copyright a,
+#copyright a:visited,
+#copyright a:hover			{ color: #444; }
+#copyright a:hover			{ color: #666; }
+#copyright .cName			{ color: #555; font-weight: bold }
 
 /***** LAYOUT GALLERY ****/
 
@@ -117,8 +117,10 @@ BODY#theCategoryPage .content	.titrePage	{ background: transparent url(skin/750d
 #menubar dt a:hover			{ color: #eee; }
 
 #menubar dd ul,
-#menubar form,
-#menubar #menuTagCloud  { padding: 0 0 10px 30px; }
+#menubar form { padding: 0 5px 10px 30px; }
+
+#menubar #menuTagCloud  		{ padding: 0 10px 10px 15px; }
+#menubar #menuTagCloud span { margin-right:5px; white-space:nowrap; }
 
 #menubar dd ul ul { padding-left: 15px; }
 
@@ -135,49 +137,116 @@ BODY#theCategoryPage .content	.titrePage	{ background: transparent url(skin/750d
 .additional_info			{ clear: both; padding: 10px; text-indent: 50px; color: #333; text-align:justify;}
 .thumbnailCategories	{ margin-left: 10px; clear:both; }
 
-.thumbnailCategories li		{ background: transparent url(skin/catBg.png) 0 0; width: 355px; height: 170px; float: left; margin-right: 15px; margin-top: 10px }
-
+.thumbnailCategories li				{ background: transparent url(skin/catBg.png) 0 0; width: 355px; height: 170px; float: left; margin-right: 15px; margin-top: 10px }
 .thumbnailCategories li.hover	{ background: transparent url(skin/catBg.png) 0 -170px; }
 
-.thumbnailCategories .illustration 	{ float: left; width: 150px; margin: 10px; }
+.thumbnailCategories .illustration		{ float: left; width: 150px; margin: 10px; }
 .thumbnailCategories .description 		{ float: right; width: 180px; margin-top: 10px; height: 160px; overflow:hidden; }
 .thumbnailCategories .description h3	{ margin-bottom: 10px; font-weight: 700; color: #f70; }
-.thumbnailCategories .dates					{   }
 .thumbnailCategories .Nb_images 			{ font-size: 0.8em; margin-bottom: 10px; }
 .thumbnailCategories .desc		 				{ font-size: 0.9em; }
 
-.thumbnails						{ margin-left: 10px; min-height: 540px; height: auto !important; height: 540px; text-align: center;}
-.thumbnails li					{ float: left; display: inline; width: 170px; height: 170px; margin-left: 10px; margin-bottom: 10px; background: transparent url(skin/thumbBg.png) 0 0;}
-.thumbnails li.hover		{ background: transparent url(skin/thumbBg.png) 0 -170px; }
+.thumbnails								{ margin-left: 10px; min-height: 540px; height: auto !important; height: 540px; text-align: center;}
+.thumbnails li						{ float: left; display: inline; width: 170px; height: 170px; margin-left: 10px; margin-bottom: 10px; background: transparent url(skin/thumbBg.png) 0 0;}
+.thumbnails li.hover			{ background: transparent url(skin/thumbBg.png) 0 -170px; }
 .thumbnails li .wrap2 		{ width:170px; height:172px; display:table-cell; vertical-align:middle;}
 .thumbnails li img				{ margin: 10px; border: 1px solid #222; border-left: 1px solid #444; border-bottom: 1px solid #444;}
 .thumbnails li.hover img	{ border: 1px solid #111; border-left: 1px solid #222; border-bottom: 1px solid #222; }
 
 .thumbnails .thumbLegend { display:none; }
 
-.categoryActions	{ float:right; margin-right: 10px; }
+.categoryActions		{ float:right; margin-right: 10px; }
 .categoryActions li	{ float: left; margin-left:5px; display: inline; }
-#order						{ float: left; margin: 2px 5px 0 0;}
-#orderText				{ float: left; margin: 2px 8px 0 0; }
-#playSlideshow		{ width: 200px; float: left; margin-left: 20px; margin-top: 10px; }
+#order							{ float: left; margin: 2px 5px 0 0;}
+#orderText					{ float: left; margin: 2px 8px 0 0; }
+#playSlideshow			{ width: 200px; float: left; margin-left: 20px; margin-top: 10px; }
 #playSlideshow a		{ color: #666; }
 
-.navigationBar 					{ clear: both; color:#444; text-align: right; padding: 10px 30px }
+.navigationBar 						{ clear: both; color:#444; text-align: right; padding: 10px 30px }
 .navigationBar span,
 .navigationBar a					{ border: 1px solid; padding: 0px 5px; }
 .navigationBar a,
 .navigationBar a:visited	{ color: #999}
 .navigationBar a:hover		{ color: #eee}
 
-.navigationBarSimple 		{ color:#666; text-align: center; }
-
+.navigationBarSimple							{ color:#666; text-align: center; }
 .navigationBarSimple span,
-.navigationBarSimple a		{ height: 150px; width: 20px; border: 0; padding: 0; text-indent: -3000px; }
-
+.navigationBarSimple a						{ height: 150px; width: 20px; border: 0; padding: 0; text-indent: -3000px; }
 .navigationBarSimple .prew 				{ position: absolute; top: 235px; left: 0px; background: transparent url(icon/prew.png) no-repeat scroll; }
 .navigationBarSimple .next 				{ position: absolute; top: 235px; right: 0px; background: transparent url(icon/next.png) no-repeat scroll;  }
-.navigationBarSimple a.prew:hover 	{ background: transparent url(icon/prew.png) 0 -150px no-repeat scroll; }
-.navigationBarSimple a.next:hover 	{ background: transparent url(icon/next.png) 0 -150px no-repeat scroll; }
+.navigationBarSimple a.prew:hover { background: transparent url(icon/prew.png) 0 -150px no-repeat scroll; }
+.navigationBarSimple a.next:hover { background: transparent url(icon/next.png) 0 -150px no-repeat scroll; }
+
+/****** CALENDAR => Not fixed yet */
+
+table.calMonth tbody td,
+table.calMonth tbody td div.calImg { height:80px; padding:1px 2px; width:80px; }
+
+.content DIV.calendarViews			{ display: block; float: right; margin: -20px 0 0; }
+.content DIV.calendarCalBar			{ margin: 10px 10px; text-align: left; }
+SPAN.calItem, SPAN.calItemEmpty	{ font-weight: bold; margin: 0 1px; }
+SPAN.calItem A									{ border:0 }
+SPAN.calCalHead									{ font-weight: bold; font-size: 110%; margin: 0 2px; }
+SPAN.calCal											{ margin: 0 2px; }
+
+.calendarBar				{ margin:15px; }
+TABLE.calMonth			{ border: none; margin:10px auto; }
+TD.calDayCellFull,
+TD.calDayCellEmpty,
+TD.calDayCellBlank	{ vertical-align: top; font-weight: bold; font-size: 18px; }
+TD.calDayHead				{ font-weight: bold; font-size: 12px; text-align: center; padding:10px; }
+DIV.calImg					{ overflow: hidden; vertical-align: bottom; z-index: 1; position: relative; }
+.calImg img					{	position: relative;	border: 0; }
+.calBackDate				{ padding-left: 4px;	padding-top: 0px;	z-index: 2;	position: absolute;	vertical-align: top; color: #000; }
+.calForeDate				{ padding-left: 5px;	padding-top: 1px;	z-index: 3;	position: absolute;	vertical-align: top; color: #fff; }
+
+/****** TAGS */
+#fullTagCloud				{ font-size:120%; margin:1em 2em; padding:0; text-align:justify; }
+#fullTagCloud span	{ margin:0 2px; white-space:nowrap; }
+
+.tagLevel5 { font-size: 150% !important; }
+.tagLevel4 { font-size: 140% !important; }
+.tagLevel3 { font-size: 120% !important; }
+.tagLevel2 { font-size: 100% !important; }
+.tagLevel1 { font-size: 80%  !important; }
+
+#theTagsPage TABLE { width:100%; }
+#theTagsPage TD { vertical-align: top; }
+
+FIELDSET.tagLetter			{ border: 1px solid #444; margin: 0.5em; padding: 10px; }
+LEGEND.tagLetterLegend	{ display:block; border: 1px solid #444;	font-size:120%;	font-weight: bold; padding: 0 5px; font-style: normal; }
+TABLE.tagLetterContent	{ width:100%;	border-collapse:collapse; }
+
+/****** SEARCH PAGE */
+FORM.filter FIELDSET	{ border: 1px solid; padding: 1em;	margin: 1em; overflow: hidden; }
+FORM.filter legend		{ display: block; padding:5px;}
+FORM.filter label			{ width:auto; clear:none; margin-top:0; }
+
+FORM.filter FIELDSET UL { margin: 0; }
+FORM.filter FIELDSET UL,
+FORM.filter FIELDSET LABEL { display: block; float: left;	margin-right: 1em; padding: 0; }
+FORM.filter FIELDSET LI {	list-style: none;	margin-bottom: 0.5em; }
+FORM.filter FIELDSET LI LABEL {	display: inline; float: none; }
+FORM.filter FIELDSET UL.tagSelection LABEL { display: inline;	float: none; margin-right:0.5em; }
+
+FORM.filter FIELDSET LABEL INPUT,
+FORM.filter FIELDSET LABEL SELECT,
+FORM.filter FIELDSET LABEL SPAN,
+FORM.filter FIELDSET LABEL TEXTAREA { display: block; margin: 0.5em 0; }
+
+FORM.filter FIELDSET * LABEL INPUT,
+FORM.filter FIELDSET * LABEL SELECT,
+FORM.filter FIELDSET * LABEL TEXTAREA,
+FORM.filter FIELDSET LABEL SPAN INPUT,
+FORM.filter FIELDSET LABEL SPAN SELECT,
+FORM.filter FIELDSET LABEL SPAN TEXTAREA { display: inline;	vertical-align: top; margin: 0 0.5em 0 0; }
+
+FORM.filter FIELDSET UL.tagSelection LI LABEL INPUT {	margin-right:0; }
+FORM.filter FIELDSET LABEL SPAN SELECT { margin: 0; }
+FORM.filter FIELDSET P { clear: left;	display: block; }
+FORM.filter INPUT[type="submit"] { margin-top: 1em; }
+
+FORM.filter select.categoryList { height:20em; width:500px;}
 
 /****** PHOTO */
 #imageHeaderBar		{ height: 30px;}
@@ -203,6 +272,7 @@ BODY#theCategoryPage .content	.titrePage	{ background: transparent url(skin/750d
 #imageInfoLeft	{ float: left; width: 500px; text-align: left; margin-bottom: 10px; }
 #imageInfoRight	{ float: right; width: 250px; height: 40px; text-align: right; margin-bottom: 10px; }
 
+#imageTags			{ margin-top:5px; }
 #ratingSummary	{ margin-bottom: 3px; }
 
 #rateForm input		{ height: 25px; margin: 0}

@@ -21,8 +21,8 @@
 
 <div id="theImage">
   <div id="imageContainer">
-    {if isset($previous) }<a class="navThumb" id="linkPrev" href="{$previous.U_IMG}" title="{'previous_page'|@translate} : {$previous.TITLE}" rel="prev"><img src="{$previous.THUMB_SRC}" alt="{$previous.TITLE}" /></a>{/if}
-    {if isset($next) }<a class="navThumb" id="linkNext" href="{$next.U_IMG}" title="{'next_page'|@translate} : {$next.TITLE}" rel="next"><img src="{$next.THUMB_SRC}" alt="{$next.TITLE}" /></a>{/if}
+    {if isset($previous) }<a class="navThumb" id="linkPrev" href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev"><img src="{$previous.THUMB_SRC}" alt="{$previous.TITLE}" /></a>{/if}
+    {if isset($next) }<a class="navThumb" id="linkNext" href="{$next.U_IMG}" title="{'Next'|@translate} : {$next.TITLE}" rel="next"><img src="{$next.THUMB_SRC}" alt="{$next.TITLE}" /></a>{/if}
     <div id="theImg">{$ELEMENT_CONTENT}</div>
   </div>
   {if isset($U_SLIDESHOW_STOP) }<p>[ <a href="{$U_SLIDESHOW_STOP}">{'slideshow_stop'|@translate}</a>]</p>{/if}

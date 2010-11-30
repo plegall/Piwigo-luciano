@@ -13,6 +13,9 @@
 </style>
 {/if}
 
+{html_head}
+<script type="text/javascript">if (typeof jQuery != 'undefined') {ldelim} jQuery.noConflict();}</script>
+{/html_head}
 {known_script id="mootools.core" src=$ROOT_URL|@cat:"themes/luciano/js/mootools-1.2.4-core.js"}
 {known_script id="mootools.more" src=$ROOT_URL|@cat:"themes/luciano/js/mootools-1.2.4.4-more.js"}
 {known_script id="luciano.script" src=$ROOT_URL|@cat:"themes/luciano/js/script.js"}

@@ -80,6 +80,7 @@
 {/if}
 
   <p class="bottomButtons">
+    <input type="hidden" name="pwg_token" value="{$PWG_TOKEN}">
     <input type="hidden" name="nb_image_line" id="nb_image_line" value="{$NB_IMAGE_LINE}">
     <input type="hidden" name="nb_line_page" id="nb_line_page" value="{$NB_ROW_PAGE}" >
     <input type="hidden" name="show_nb_comments" id="show_nb_comments" value="{$NB_COMMENTS}" >

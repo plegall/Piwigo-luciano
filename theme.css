@@ -48,16 +48,7 @@ FORM #themeSelect, form #languageSelect  { float: left; line-height:0.8em; paddi
 html, body 	{
  background-color: #111;
  color: #666;
- font-family:
-	Corbel,
-	"Lucida Grande",
-	"Lucida Sans Unicode",
-	"Lucida Sans",
-	"DejaVu Sans",
-	"Bitstream Vera Sans",
-	"Liberation Sans",
-	Verdana,
-	sans-serif;
+ font-family: Corbel, Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Bitstream Vera Sans, Liberation Sans, Verdana, sans-serif;
 }
 
 p 						{ margin: 10px;}

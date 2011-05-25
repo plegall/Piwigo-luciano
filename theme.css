@@ -261,7 +261,7 @@ FORM.filter select.categoryList { height:20em; width:500px;}
 
 #imageInfo			{ margin-top: 10px; }
 #imageInfoLeft	{ float: left; width: 500px; text-align: left; margin-bottom: 10px; }
-#imageInfoRight	{ float: right; width: 250px; height: 40px; text-align: right; margin-bottom: 10px; }
+#imageInfoRight	{ float: right; width: 350px; height: 40px; text-align: right; margin-bottom: 10px; }
 
 #imageTags			{ margin-top:5px; }
 #ratingSummary	{ margin-bottom: 3px; }

@@ -67,11 +67,17 @@
         
         " title="{$mark}" />
         {/foreach}
-        <script type="text/javascript">
-	  		makeNiceRatingForm( {ldelim}rootUrl: '{$ROOT_URL|@escape:"javascript"}', image_id: {$current.id},
-	  		  ratingSummaryText: "{'Average rate'|@translate}: {'%.2f (rated %d times)'|@translate|@escape:'javascript'}",
-          ratingSummaryElement: document.getElementById("ratingSummary") {rdelim} );
-	  		</script>
+
+{combine_script id='rating' load='header' require='core.scripts' path='themes/default/js/rating.js'}
+{footer_script}
+makeNiceRatingForm({ldelim}
+  rootUrl: '{$ROOT_URL|@escape:"javascript"}',
+  image_id: {$current.id},
+  ratingSummaryText: "{'Average rate'|@translate}: {'%.2f (rated %d times)'|@translate|@escape:'javascript'}",
+  ratingSummaryElement: document.getElementById("ratingSummary")
+{rdelim});
+{/footer_script}
+
       </div>
     </form>
     {else}

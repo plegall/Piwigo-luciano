@@ -87,12 +87,19 @@ h2 a					{ margin-left: 3px; }
 #rss		{ position: absolute; top: 10px; right: 0;  }
 #rss a		{ display: block; width: 28px; height: 28px; text-indent: -2000px; border: 0;	background: transparent url('icon/rss.png'); }
 
-.content 						{ float: right; width: 1024px; margin-bottom: 10px; padding-bottom: 10px; position: relative; background: transparent url(skin/1024darkBottom.png) bottom left; }
-.content .titrePage	{ background: transparent url(skin/1024darkTop.png) no-repeat; }
-.content dl					{ margin: 25px; }
+.content {
+  float: right;
+  width: 750px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  background: transparent url(skin/750darkBottom.png) bottom left;
+}
+.content .titrePage {
+ background: transparent url(skin/750darkTop.png) no-repeat;
+}
+.content dl {margin: 25px;}
 
-BODY#theCategoryPage .content							{ width: 750px; background: transparent url(skin/750darkBottom.png) bottom left; }
-BODY#theCategoryPage .content	.titrePage	{ background: transparent url(skin/750darkTop.png) no-repeat; }
 
 #menubar		{ float: left; width: 264px; margin-bottom: 20px; text-align: left; color: #888; }
 #menubar dl 	{ width: 264px; background: transparent url(skin/264grey3.png); margin-bottom: 10px; }
@@ -299,6 +306,9 @@ FORM.filter select.categoryList { height:20em; width:500px;}
 .rateFull4						{ display: block; float: left; width: 100px; height: 25px; background: url('icon/star.png') 0 -75px repeat-x scroll;}
 .rateFull5						{ display: block; float: left; width: 125px; height: 25px; background: url('icon/star.png') 0 -75px repeat-x scroll;}
 .rateHalf							{ display: block; float: left; width: 25px; height: 25px; background: url('icon/star.png') 0 -50px repeat-x scroll;}
+
+/****** Lost Password Page */
+#lostPassword label {float:none;}
 
 /* OTHERS */
 

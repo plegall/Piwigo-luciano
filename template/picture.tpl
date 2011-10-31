@@ -1,4 +1,7 @@
 {if !empty($PLUGIN_PICTURE_BEFORE)}{$PLUGIN_PICTURE_BEFORE}{/if}
+
+{include file='picture_nav_keys.tpl'|@get_extent:'picture_nav_keys'}
+
 <div id="imageHeaderBar">
     <div class="browsePath">
       {$SECTION_TITLE}
@@ -12,10 +15,10 @@
     {if isset($favorite)				}<li><a href="{$favorite.U_FAVORITE}" title="{$favorite.FAVORITE_HINT}" id="bn-favourite">{$favorite.FAVORITE_HINT}</a></li>{/if}
     {if !empty($U_SET_AS_REPRESENTATIVE)}<li><a href="{$U_SET_AS_REPRESENTATIVE}" title="{'set as category representative'|@translate}" id="bn-higlight">{'representative'|@translate}</a></li>{/if}
     {if isset($U_ADMIN)					}<li><a href="{$U_ADMIN}" title="{'link_info_image'|@translate}" id="bn-edit">{'edit'|@translate}</a></li>{/if}
-    {if isset($U_CADDIE)				}
+    {if isset($U_CADDIE)				}{*caddie management BEGIN*}
                       <script type="text/javascript">{literal}function addToCadie(aElement, rootUrl, id){if (aElement.disabled) return;aElement.disabled=true;var y=new PwgWS(rootUrl);y.callService("pwg.caddie.add",{image_id: id},{onFailure:function(num,text){alert(num+" "+text);document.location=aElement.href;},onSuccess:function(result){aElement.disabled=false;}});}{/literal}</script>
                       <li><a href="{$U_CADDIE}" onclick="addToCadie(this, '{$ROOT_URL|@escape:'javascript'}', {$current.id}); return false;" title="{'add to caddie'|@translate}" id="bn-caddie">{'caddie'|@translate}</a></li>
-    {/if}
+    {/if}{*caddie management END*}
   </ul>
 </div>
 

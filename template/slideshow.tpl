@@ -1,6 +1,9 @@
 <div id="imageHeaderBar">
 	<div class="imageNumber">{$PHOTO}</div>
 </div>
+
+{include file='picture_nav_keys.tpl'|@get_extent:'picture_nav_keys'}
+
 <div id="slidshowToolBar">{include file='picture_nav_buttons.tpl'|@get_extent:'picture_nav_buttons'}</div>
 <div id="imageContainer">
 	<div id="theImage">

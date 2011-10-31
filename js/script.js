@@ -194,7 +194,7 @@ function submitRating(e)
 				if (gRatingOptions.ratingSummaryElement)
 				{
 					var t = gRatingOptions.ratingSummaryText;
-					var args =[result.average, result.count, result.stdev], idx = 0, rexp = new RegExp( /%\.?\d*[sdf]/ );
+					var args =[result.score, result.count, result.stdev], idx = 0, rexp = new RegExp( /%\.?\d*[sdf]/ );
 					_xxx = t.match( rexp );
 					while (idx<args.length) t=t.replace(rexp, args[idx++]);
 					gRatingOptions.ratingSummaryElement.innerHTML = t;

@@ -98,6 +98,18 @@ h2 a					{ margin-left: 3px; }
 .content .titrePage {
  background: transparent url(skin/750darkTop.png) no-repeat;
 }
+
+/* special for PWG Stuff blocks on picture.php with menubar available on picture.php but disabled - starts here */
+#thePicturePage .content {
+  width: 1024px;
+  background: transparent url(skin/1024darkBottom.png) bottom left;
+}
+
+#thePicturePage .content .titrePage {
+  background: transparent url(skin/1024darkTop.png) no-repeat;
+}
+/* special for PWG Stuff blocks on picture.php with menubar available on picture.php but disabled - stops here */
+
 .content dl {margin: 25px;}
 
 

@@ -142,9 +142,10 @@ function updateRating(el)
 	}
 }
 
-function setNewRate(average, count, stdev, newRating)
+function setNewRate(score, count, stdev, newRating)
 {
-	ratingSplitted = average.split('.');
+	var score = score+"";
+	ratingSplitted = score.split('.');
 	starFull = ratingSplitted[0];
 	starHalf = (ratingSplitted[1] > 49) ? true : false;
 	
@@ -189,7 +190,7 @@ function submitRating(e)
 			onSuccess: function(result)	{
 				gUserRating = rateButton.initialRateValue;
 				for (var i=0; i<gRatingButtons.length; i++) gRatingButtons[i].disabled=false;
-				setNewRate(result.average, result.count, result.stdev, rateButton.initialRateValue);
+				setNewRate(result.score, result.count, result.stdev, rateButton.initialRateValue);
 				if (gRatingOptions.ratingSummaryElement)
 				{
 					var t = gRatingOptions.ratingSummaryText;

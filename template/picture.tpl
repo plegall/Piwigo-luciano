@@ -40,18 +40,21 @@
     {/if}
   </div>
 
-  {if $display_info.average_rate and isset($rate_summary) }
+  {if $display_info.rating_score and isset($rate_summary) }
   <div id="imageInfoRight">
     <div class="value" id="ratingSummary">
-        {'Average rate'|@translate}:
-		  	{assign var='rate_text' value='%.2f (rated %d times)'|@translate }
-		  	{$pwg->sprintf($rate_text, $rate_summary.average, $rate_summary.count) }
+        {'Rating score'|@translate}:
+    {if $rate_summary.count}
+        <span id="ratingScore">{$rate_summary.score}</span> <span id="ratingCount">({assign var='rate_text' value='%d rates'|@translate}{$pwg->sprintf($rate_text, $rate_summary.count)})</span>
+    {else}
+        <span id="ratingScore">{'no rate'|@translate}</span> <span id="ratingCount"></span>
+    {/if}
     </div>
     
     {if isset($rating)}
     <form action="{$rating.F_ACTION}" method="post" id="rateForm">
       <div>
-      {assign var="ratingExploded" value=$rate_summary.average|@explode:'.'}
+      {assign var="ratingExploded" value=$rate_summary.score|@explode:'.'}
       {foreach from=$rating.marks item=mark name=rate_loop}
         {if !$smarty.foreach.rate_loop.first} | {/if}
         
@@ -73,7 +76,7 @@
 makeNiceRatingForm({ldelim}
   rootUrl: '{$ROOT_URL|@escape:"javascript"}',
   image_id: {$current.id},
-  ratingSummaryText: "{'Average rate'|@translate}: {'%.2f (rated %d times)'|@translate|@escape:'javascript'}",
+  ratingSummaryText: "{'Rating score'|@translate}: %.2f ({'%d rates'|@translate|@escape:'javascript'})",
   ratingSummaryElement: document.getElementById("ratingSummary")
 {rdelim});
 {/footer_script}

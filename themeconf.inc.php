@@ -12,7 +12,7 @@ $themeconf = array(
   'parent'                 => 'default',
   'icon_dir'               => 'themes/luciano/icon',
   'local_head'             => 'local_head.tpl',
-  'load_parent_css'        => false,
+  'load_parent_css'        => true, // false,
   'load_parent_local_head' => false,
 );
 

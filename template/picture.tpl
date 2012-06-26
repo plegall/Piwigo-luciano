@@ -22,6 +22,24 @@
   </ul>
 </div>
 
+{footer_script require='jquery'}{literal}
+jQuery("#linkPrev img, #linkNext img").css("opacity", 0);
+
+jQuery("#linkPrev").mouseenter(function() {
+  jQuery("#linkPrev img").css("opacity", 1);
+});
+jQuery("#linkPrev").mouseleave(function() {
+  jQuery("#linkPrev img").css("opacity", 0);
+});
+
+jQuery("#linkNext").mouseenter(function() {
+  jQuery("#linkNext img").css("opacity", 1);
+});
+jQuery("#linkNext").mouseleave(function() {
+  jQuery("#linkNext img").css("opacity", 0);
+});
+{/literal}{/footer_script}
+
 <div id="theImage">
   <div id="imageContainer">
     {if isset($previous) }<a class="navThumb" id="linkPrev" href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev"><img src="{$previous.THUMB_SRC}" alt="{$previous.TITLE}" /></a>{/if}
@@ -83,7 +101,6 @@ makeNiceRatingForm({ldelim}
   ratingSummaryElement: document.getElementById("ratingSummary")
 {rdelim});
 {/footer_script}
-
       </div>
     </form>
     {else}

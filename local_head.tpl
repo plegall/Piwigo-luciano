@@ -13,9 +13,11 @@
 </style>
 {/if}
 
+{*
 {combine_script id="mootools.core" path="themes/luciano/js/mootools-1.2.4-core.js"}
 {combine_script id="mootools.more" require="mootools.core" path="themes/luciano/js/mootools-1.2.4.4-more.js"}
-{combine_script id="luciano.script" require="mootools.more" path="themes/luciano/js/script.js"}
+*}
+{combine_script id="luciano.script" path="themes/luciano/js/script.js"}
 
 {footer_script}
 if (typeof jQuery != 'undefined') {ldelim} jQuery.noConflict();}

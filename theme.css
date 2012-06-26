@@ -393,3 +393,5 @@ A:hover .pwg-icon { background-image: url(../default/s26/outline_ffffff.png);}
 .switchBoxTitle {
   border-bottom: 1px solid #444444;
 }
+
+#derivativeSwitchLink {display:none;}

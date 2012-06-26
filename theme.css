@@ -18,8 +18,7 @@ table 						{ border-collapse: collapse; border-spacing: 0 }/* tables still need
 /* FORM */
 fieldset, form, label, legend 	{ margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;	vertical-align:baseline; }
 fieldset										{ margin: 0; padding-right: 2em; }
-legend											{ padding: 0; }
-label												{ float:left; width:12em; clear:left; text-align:left;  cursor:hand; }
+legend { padding: 0; }
 textarea, input, select, label, button, optgroup	{ margin-top:5px; }
 input[type="checkbox"] ,input[type="radio"]	{ margin-bottom:7px; }
 
@@ -150,23 +149,25 @@ h2 a					{ margin-left: 3px; }
 .content .titrePage						{ padding: 10px 0 5px 10px; height: 30px; }
 .titrePage h1					{ float: left; }
 .content .additional_info {padding: 10px; text-indent: 20px; color: #666; text-align:justify;font-size:100%; }
-.thumbnailCategories	{ margin-left: 10px; }
+.thumbnailCategories	{ margin-left: 10px; margin-bottom:10px;}
 
 .thumbnailCategories li				{ background: transparent url(skin/catBg.png) 0 0; width: 355px; height: 170px; float: left; margin-right: 15px; margin-top: 10px }
-.thumbnailCategories li.hover	{ background: transparent url(skin/catBg.png) 0 -170px; }
+.thumbnailCategories li:hover	{ background: transparent url(skin/catBg.png) 0 -170px; }
 
-.thumbnailCategories .illustration		{ float: left; width: 150px; margin: 10px; }
-.thumbnailCategories .description 		{ float: right; width: 180px; margin-top: 10px; height: 160px; overflow:hidden; }
-.thumbnailCategories .description h3	{ margin-bottom: 10px; font-weight: 700; color: #f70; }
-.thumbnailCategories .Nb_images 			{ font-size: 0.8em; margin-bottom: 10px; }
-.thumbnailCategories .desc		 				{ font-size: 0.9em; }
+.thumbnailCategory .illustration		{ float: left; width: 150px !important; margin: 0; }
+.thumbnailCategory .illustration img {max-width:150px;max-height:150px;}
+.thumbnailCategory .description 		{ float: right; width: 180px; margin-top: 0; height: 160px !important; overflow:hidden; }
+.thumbnailCategory .description h3	{ margin-bottom: 10px; font-weight: 700; color: #f70; }
+.thumbnailCategory .Nb_images 			{ font-size: 0.8em; margin-bottom: 10px; }
+.thumbnailCategory .desc		 				{ font-size: 0.9em; }
 
 .thumbnails								{ margin-left: 10px; min-height: 540px; height: auto !important; height: 540px; text-align: center;}
 .thumbnails li						{ float: left; display: inline; width: 170px; height: 170px; margin-left: 10px; margin-bottom: 10px; background: transparent url(skin/thumbBg.png) 0 0;}
-.thumbnails li.hover			{ background: transparent url(skin/thumbBg.png) 0 -170px; }
+.thumbnails li:hover			{ background: transparent url(skin/thumbBg.png) 0 -170px; }
 .thumbnails li .wrap2 		{ width:170px; height:172px; display:table-cell; vertical-align:middle;}
-.thumbnails li img				{ border: 1px solid #222; border-left: 1px solid #444; border-bottom: 1px solid #444;}
-.thumbnails li.hover img	{ border: 1px solid #111; border-left: 1px solid #222; border-bottom: 1px solid #222; }
+.thumbnails SPAN, .thumbnails .wrap2 A, .thumbnails LABEL { width: auto !important; } /* todo remove this and manage smart dimensions for multisize */
+.thumbnails li img				{ border: 1px solid #222; border-left: 1px solid #444; border-bottom: 1px solid #444; max-height:150px;max-width:150px;} /* todo remove max-* and manage smart dimensions for multisize */
+.thumbnails li:hover img	{ border: 1px solid #111; border-left: 1px solid #222; border-bottom: 1px solid #222; }
 
 .thumbnails .thumbLegend { display:none; }
 

@@ -1,10 +1,10 @@
 <?php
 /*
 Theme Name: Luciano Amodio
-Version: 2.1.a
+Version: auto
 Description: Luciano Amodio's theme
 Theme URI: http://piwigo.org/ext/extension_view.php?eid=387
-Author: Luciano Amodio & P@t
+Author: Luciano Amodio & P@t & plg
 Author URI: http://www.lucianoamodio.it/portfolio/
 */
 

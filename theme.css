@@ -30,6 +30,7 @@ textarea:focus
 input:focus, #menubar input:focus	{ border: 1px solid #666; }
 select			{ background-color: #222; color: #666; }
 input, #menubar input { border: 1px solid #444; background-color: #222; color: #666; }
+input[type="text"], input[type="password"], input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]  { border: 1px solid #444; background-color: #222; color: #666; }
 input[type="submit"], #menubar input[type="submit"] { background-color: #666; color: #222; }
 input[type="submit"]:hover, #menubar input[type="submit"]:hover { background-color: #222; color: #666; cursor: hand; }
 input[type="checkbox"]			{ color: #000; border: 0 none; vertical-align: middle; }
@@ -332,14 +333,12 @@ FORM.filter select.categoryList { height:20em; width:500px;}
 
 .content form	{ margin: 10px; }
 
-.errors,
-.infos				{ margin: 10px; color: #fff; font-weight: 700; }
-.errors p,
-.infos p				{ margin: 30px 0 10px ; color: #900; }
-.errors	li,
-.infos li				{ list-style: decimal; margin-left: 30px;}
+.errors {background-color:red;}
+.errors, .infos { margin: 10px; color: #fff; font-weight: 700; border-radius:6px; min-height:30px;}
+.errors p, .infos p { margin: 30px 0 10px ; color: #900; }
+.errors	li, .infos li { list-style: decimal; margin-left: 30px;}
 
-.idLink				{ margin-top: 20px; }
+.idLink { margin-top: 20px; }
 
 /* MOOTOOLS PLUGIN */
 
@@ -395,3 +394,32 @@ A:hover .pwg-icon { background-image: url(../default/s26/outline_ffffff.png);}
 }
 
 #derivativeSwitchLink {display:none;}
+
+/* profile */
+form#profile .chzn-container-single .chzn-search {display:none}
+
+form#profile .chzn-container-active .chzn-single-with-drop {
+    background-color: #666666;
+    background-image: none;
+    border: 1px solid #666666;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+    color: #CCCCCC;
+}
+
+form#profile .chzn-container-single .chzn-single {
+  background-image: none;
+  background-color: #444444;
+  border: 1px solid #666666;
+  box-shadow: none;
+  color: #CCCCCC;
+}
+
+form#profile .chzn-container .chzn-drop {
+  background-color: #444444;
+  background-image: none;
+  border: 1px solid #666666;
+  box-shadow: none;
+  color: #CCCCCC;
+}

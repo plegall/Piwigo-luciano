@@ -13,12 +13,13 @@
 </style>
 {/if}
 
-{*
-{combine_script id="mootools.core" path="themes/luciano/js/mootools-1.2.4-core.js"}
-{combine_script id="mootools.more" require="mootools.core" path="themes/luciano/js/mootools-1.2.4.4-more.js"}
-*}
 {combine_script id="luciano.script" path="themes/luciano/js/script.js"}
 
-{footer_script}
-if (typeof jQuery != 'undefined') {ldelim} jQuery.noConflict();}
-{/footer_script}
+{combine_script id='jquery.chosen' load='footer' path='themes/default/js/plugins/chosen.jquery.min.js'}
+{combine_css path="themes/default/js/plugins/chosen.css"}
+
+{footer_script require='jquery'}{literal}
+jQuery(document).ready(function() {
+  jQuery("select[name=theme], select[name=language]").chosen();
+});
+{/literal}{/footer_script}

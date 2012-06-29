@@ -166,7 +166,7 @@ h2 a					{ margin-left: 3px; }
 .thumbnails li:hover			{ background: transparent url(skin/thumbBg.png) 0 -170px; }
 .thumbnails li .wrap2 		{ width:170px; height:172px; display:table-cell; vertical-align:middle;}
 .thumbnails SPAN, .thumbnails .wrap2 A, .thumbnails LABEL { width: 150px !important; } /* todo remove this and manage smart dimensions for multisize */
-.thumbnails li img				{ border: 1px solid #222; border-left: 1px solid #444; border-bottom: 1px solid #444; max-height:150px;max-width:150px;} /* todo remove max-* and manage smart dimensions for multisize */
+.thumbnails li .wrap1 .wrap2 img { border: 1px solid #222; border-left: 1px solid #444; border-bottom: 1px solid #444; max-height:150px;max-width:150px;} /* todo remove max-* and manage smart dimensions for multisize */
 .thumbnails li:hover img	{ border: 1px solid #111; border-left: 1px solid #222; border-bottom: 1px solid #222; }
 
 .thumbnails .thumbLegend { display:none; }

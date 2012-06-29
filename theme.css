@@ -179,7 +179,7 @@ h2 a					{ margin-left: 3px; }
 #playSlideshow			{ width: 200px; float: left; margin-left: 20px; margin-top: 10px; }
 #playSlideshow a		{ color: #666; }
 
-.content .navigationBar 						{ clear: both; color:#444; text-align: right; padding: 10px 30px }
+.content .navigationBar 						{ color:#444; text-align: right; padding: 10px 30px }
 .content .navigationBar span,
 .content .navigationBar a					{ border: 1px solid; padding: 0px 5px; }
 .content .navigationBar a,

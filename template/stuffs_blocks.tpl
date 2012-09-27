@@ -1,5 +1,5 @@
 {foreach from=$blocks item=block key=key}
-	<div id="stuffs_block_{$block.ID}" class="content">
+	<div id="stuffs_block_{$block.ID}" class="content contentWithMenu">
 	{if isset($block.TITLE)}
 		<div class="titrePage">
 			{if !empty($block.U_EDIT)}

@@ -50,7 +50,7 @@ jQuery("#linkNext").mouseleave(function() {
 </div>
 
 {if isset($COMMENT_IMG)}
-<p>{$COMMENT_IMG}</p>
+<p class="imageComment">{$COMMENT_IMG}</p>
 {/if}
 
 <div id="imageInfo">

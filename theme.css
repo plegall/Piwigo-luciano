@@ -382,6 +382,10 @@ A:hover .pwg-icon { background-image: url(../default/s26/outline_ffffff.png);}
   margin-left: 275px;
 }
 
+#thePicturePage .contentWithMenu {
+  margin-left: 0;
+}
+
 .switchBox {
   border: 1px solid #000000;
   background-color: #555;

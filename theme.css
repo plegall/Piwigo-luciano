@@ -276,7 +276,7 @@ FORM.filter select.categoryList { height:20em; width:500px;}
 .randomButtons li	{ float: left; margin-left: 15px;}
 
 #theImage 				{ clear: left; text-align: left; margin-top: 20px; }
-#imageContainer	{ position: relative; width: 1024px; height: 600px; }
+#imageContainer	{ position: relative; width: 1024px; }
 #theImg		 			{ display: block; margin: 0 auto; border: none; text-align: center; }
 
 #linkThumbs			{ position: absolute; top: 0; left: 400px; width: 224px; height: 600px; }

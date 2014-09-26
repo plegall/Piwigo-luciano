@@ -235,7 +235,7 @@ LEGEND.tagLetterLegend	{ display:block; border: 1px solid #444;	font-size:120%;	
 TABLE.tagLetterContent	{ width:100%;	border-collapse:collapse; }
 
 /****** SEARCH PAGE */
-FORM.filter FIELDSET	{ border: 1px solid; padding: 1em;	margin: 1em; overflow: hidden; }
+FORM.filter FIELDSET	{ border: 1px solid #444; padding: 1em;	margin: 1em; }
 FORM.filter legend		{ display: block; padding:5px;}
 FORM.filter label			{ width:auto; clear:none; margin-top:0; }
 

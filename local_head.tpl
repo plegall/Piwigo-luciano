@@ -5,14 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="{$ROOT_URL}themes/luciano/fix-ie6.css">
 <![endif]-->
 
-{if $BODY_ID == 'thePicturePage'}
-<style type="text/css">
-#theImage #theImg img {ldelim}
-  margin-top:{math equation="(600-y)/2" y=$HEIGHT_IMG format="%d"}px;
-}
-</style>
-{/if}
-
 {combine_script id="luciano.script" path="themes/luciano/js/script.js"}
 
 {combine_script id='jquery.chosen' load='footer' path='themes/default/js/plugins/chosen.jquery.min.js'}

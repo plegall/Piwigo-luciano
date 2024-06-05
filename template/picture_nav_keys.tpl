@@ -16,23 +16,23 @@ switch(keyCode) {
 case 63235: case 39: if (e.ctrlKey || docElem.scrollLeft==docElem.scrollWidth-docElem.clientWidth ){ldelim}window.location="{$next.U_IMG}".replace( "&amp;", "&" ); return false; } break;
 {/if}
 {if isset($previous)}
-case 63234: case 37: if (e.ctrlKey || docElem.scrollLeft==0){ldelim}window.location="{$previous.U_IMG|@escape:jasvascript}".replace("&amp;","&"); return false; } break;
+case 63234: case 37: if (e.ctrlKey || docElem.scrollLeft==0){ldelim}window.location="{$previous.U_IMG|escape:javascript}".replace("&amp;","&"); return false; } break;
 {/if}
 {if isset($first)}
-/*Home*/case 36: if (e.ctrlKey){ldelim}window.location="{$first.U_IMG|@escape:jasvascript}".replace("&amp;","&"); return false; } break;
+/*Home*/case 36: if (e.ctrlKey){ldelim}window.location="{$first.U_IMG|escape:javascript}".replace("&amp;","&"); return false; } break;
 {/if}
 {if isset($last)}
-/*End*/case 35: if (e.ctrlKey){ldelim}window.location="{$last.U_IMG|@escape:jasvascript}".replace("&amp;","&"); return false; } break;
+/*End*/case 35: if (e.ctrlKey){ldelim}window.location="{$last.U_IMG|escape:javascript}".replace("&amp;","&"); return false; } break;
 {/if}
 {if isset($U_UP) and !isset($slideshow)}
-/*Up*/case 38: if (e.ctrlKey){ldelim}window.location="{$U_UP|@escape:jasvascript}".replace("&amp;","&"); return false; } break;
+/*Up*/case 38: if (e.ctrlKey){ldelim}window.location="{$U_UP|escape:javascript}".replace("&amp;","&"); return false; } break;
 {/if}
 
 {if isset($slideshow.U_START_PLAY)}
-/*Pause*/case 32: {ldelim}window.location="{$slideshow.U_START_PLAY|@escape:jasvascript}".replace("&amp;","&"); return false; } break;
+/*Pause*/case 32: {ldelim}window.location="{$slideshow.U_START_PLAY|escape:javascript}".replace("&amp;","&"); return false; } break;
 {/if}
 {if isset($slideshow.U_STOP_PLAY)}
-/*Play*/case 32: {ldelim}window.location="{$slideshow.U_STOP_PLAY|@escape:jasvascript}".replace("&amp;","&"); return false; } break;
+/*Play*/case 32: {ldelim}window.location="{$slideshow.U_STOP_PLAY|escape:javascript}".replace("&amp;","&"); return false; } break;
 {/if}
 }
 return true;

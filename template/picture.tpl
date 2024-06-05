@@ -42,8 +42,8 @@ jQuery("#linkNext").mouseleave(function() {
 
 <div id="theImage">
   <div id="imageContainer">
-    {if isset($previous) }<a class="navThumb" id="linkPrev" href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev"><img src="{$previous.THUMB_SRC}" alt="{$previous.TITLE}" /></a>{/if}
-    {if isset($next) }<a class="navThumb" id="linkNext" href="{$next.U_IMG}" title="{'Next'|@translate} : {$next.TITLE}" rel="next"><img src="{$next.THUMB_SRC}" alt="{$next.TITLE}" /></a>{/if}
+    {if isset($previous) }<a class="navThumb" id="linkPrev" href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev"></a>{/if}
+    {if isset($next) }<a class="navThumb" id="linkNext" href="{$next.U_IMG}" title="{'Next'|@translate} : {$next.TITLE}" rel="next"></a>{/if}
     <div id="theImg">{$ELEMENT_CONTENT}</div>
   </div>
   {if isset($U_SLIDESHOW_STOP) }<p>[ <a href="{$U_SLIDESHOW_STOP}">{'slideshow_stop'|@translate}</a>]</p>{/if}
@@ -75,16 +75,16 @@ jQuery("#linkNext").mouseleave(function() {
     {if isset($rating)}
     <form action="{$rating.F_ACTION}" method="post" id="rateForm">
       <div>
-      {assign var="ratingExploded" value=$rate_summary.score|@explode:'.'}
+      {assign var="ratingExploded" value=$rate_summary.score}
       {foreach from=$rating.marks item=mark name=rate_loop}
         {if !$smarty.foreach.rate_loop.first} | {/if}
         
         <input type="{if isset($rating.USER_RATE) && $mark==$rating.USER_RATE}button{else}submit{/if}" name="rate" value="{$mark}" class="
         {if $smarty.foreach.rate_loop.first} rateButtonReset
         {elseif $mark<=$rating.USER_RATE} 
-            rateButtonUser{if $mark<=$ratingExploded[0]}Full{elseif $mark==$ratingExploded[0]+1 && $ratingExploded[1]>49}Half{else}Empty{/if}
+            rateButtonUser{if $mark<=$ratingExploded[0]}Full{elseif $mark==(int)$ratingExploded[0]+1 && $ratingExploded[1]>49}Half{else}Empty{/if}
           {elseif $mark<=$ratingExploded[0]} rateButtonFull
-          {elseif $mark==$ratingExploded[0]+1 && $ratingExploded[1]>49} rateButtonHalf
+          {elseif $mark==(int)$ratingExploded[0]+1 && $ratingExploded[1]>49} rateButtonHalf
         {else}
         rateButtonEmpty
         {/if}
@@ -105,7 +105,7 @@ makeNiceRatingForm({ldelim}
     </form>
     {else}
     <div class="rateShow">
-      {assign var="ratingExploded" value=$rate_summary.average|@explode:'.'}
+      {assign var="ratingExploded" value=$rate_summary.average}
       <span class="rateFull{$ratingExploded[0]}"></span>{if $ratingExploded[1]>49}<span class="rateHalf"></span>{/if}
     </div>
     {/if}

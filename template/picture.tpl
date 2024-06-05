@@ -38,6 +38,12 @@ jQuery("#linkNext").mouseenter(function() {
 jQuery("#linkNext").mouseleave(function() {
   jQuery("#linkNext img").css("opacity", 0);
 });
+
+let box = document.querySelector('#theImg img');
+let height = box.offsetHeight;
+let marginTop = (600-height)/2;
+document.querySelector('#theImg img').style.marginTop = marginTop+"px";
+
 {/literal}{/footer_script}
 
 <div id="theImage">
